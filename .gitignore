@@ -11,6 +11,9 @@ __pycache__/
 frontend/node_modules/
 frontend/dist/
 
+# 保留 data.json (由 GitHub Actions 自動更新)
+!frontend/public/data.json
+
 # Env
 .env
 backend/.env
