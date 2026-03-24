@@ -101,6 +101,7 @@ def categorize_from_text(title: str, description: str) -> str:
 async def fetch_freelancer_jobs() -> List[Job]:
     """Scrape job listings from Freelancer.com."""
     jobs = []
+    seen_ids = set()
     try:
         async with httpx.AsyncClient(timeout=20.0, follow_redirects=True) as client:
             headers = {
@@ -178,6 +179,9 @@ async def fetch_freelancer_jobs() -> List[Job]:
                             category = categorize_from_text(title, description)
 
                             job_hash = hashlib.md5(f"freelancer-{title}-{job_url}".encode()).hexdigest()[:12]
+                            if job_hash in seen_ids:
+                                continue
+                            seen_ids.add(job_hash)
 
                             job = Job(
                                 id=f"freelancer-{job_hash}",

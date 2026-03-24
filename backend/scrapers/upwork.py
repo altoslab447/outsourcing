@@ -1,51 +1,45 @@
-import feedparser
+import httpx
 import hashlib
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import List
+from bs4 import BeautifulSoup
 import sys
 import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from models import Job
 
-# Upwork RSS feeds by category
-UPWORK_RSS_FEEDS = [
-    "https://www.upwork.com/ab/feed/jobs/rss?q=&sort=recency&paging=0%3B50&api_params=1&securityToken=&userUid=&orgUid=",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=web+development&sort=recency&paging=0%3B25",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=python+developer&sort=recency&paging=0%3B25",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=react+developer&sort=recency&paging=0%3B25",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=mobile+app&sort=recency&paging=0%3B25",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=graphic+design&sort=recency&paging=0%3B25",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=translation+chinese&sort=recency&paging=0%3B20",
-    "https://www.upwork.com/ab/feed/jobs/rss?q=content+writing&sort=recency&paging=0%3B20",
+GURU_URLS = [
+    "https://www.guru.com/d/jobs/",
+    "https://www.guru.com/d/jobs/cat/programming-development/",
+    "https://www.guru.com/d/jobs/cat/design-art/",
+    "https://www.guru.com/d/jobs/cat/writing-translation/",
+    "https://www.guru.com/d/jobs/cat/sales-marketing/",
 ]
 
 TECH_KEYWORDS = [
     "developer", "engineer", "software", "backend", "frontend", "fullstack",
-    "devops", "cloud", "api", "mobile", "web", "react", "python", "node",
-    "javascript", "typescript", "go", "java", "php", "flutter", "django",
-    "fastapi", "docker", "aws", "database", "wordpress", "shopify", "app",
+    "api", "mobile", "web", "react", "python", "node", "javascript",
+    "typescript", "php", "java", "flutter", "django", "wordpress", "shopify",
+    "devops", "cloud", "database", "app",
 ]
 DESIGN_KEYWORDS = [
     "design", "designer", "ux", "ui", "figma", "photoshop", "illustrator",
-    "graphic", "visual", "branding", "logo", "creative", "motion", "video",
-    "animation", "3d", "banner", "mockup",
+    "graphic", "logo", "branding", "video", "animation", "3d", "banner",
 ]
 MARKETING_KEYWORDS = [
     "marketing", "content", "copywriting", "seo", "social media", "ads",
-    "growth", "analytics", "email", "campaign", "brand", "pr", "ecommerce",
+    "email", "campaign", "growth", "ecommerce",
 ]
 TRANSLATION_KEYWORDS = [
     "translation", "translator", "localization", "writing", "editor",
-    "proofreading", "chinese", "english", "japanese", "korean", "subtitles",
+    "proofreading", "subtitles", "chinese", "japanese", "korean",
 ]
-
-# Keywords that indicate a full-time job (職缺), not a freelance project
 JOB_KEYWORDS = [
-    "full-time", "full time", "permanent", "benefits", "401k", "health insurance",
-    "paid vacation", "pto", "w-2", "salaried", "we are hiring", "join our team",
-    "employee", "employment", "annual salary",
+    "full-time", "full time", "permanent", "benefits", "401k",
+    "health insurance", "paid vacation", "salaried", "w-2",
+    "we are hiring", "join our team", "annual salary",
 ]
 
 
@@ -67,42 +61,33 @@ def categorize(title: str, description: str) -> str:
 
 
 def is_job_listing(title: str, description: str) -> bool:
-    """Return True if this looks like a full-time job, not a freelance project."""
     combined = (title + " " + description).lower()
     return any(kw in combined for kw in JOB_KEYWORDS)
 
 
-def parse_budget_from_text(text: str):
-    """Extract budget range from Upwork description text."""
-    budget_min, budget_max = None, None
-
-    # Hourly: "$X.xx-$Y.yy" or "Hourly: $X"
-    hourly = re.search(r'[Hh]ourly[:\s]+\$?([\d,]+\.?\d*)\s*[-–]\s*\$?([\d,]+\.?\d*)', text)
-    if hourly:
-        low = float(hourly.group(1).replace(",", ""))
-        high = float(hourly.group(2).replace(",", ""))
-        budget_min = low * 160   # ~1 month
-        budget_max = high * 160
-        return budget_min, budget_max
-
-    # Fixed: "Budget: $X" or "Fixed-Price: $X"
-    fixed = re.search(r'(?:[Bb]udget|[Ff]ixed)[:\s]+\$?([\d,]+)', text)
-    if fixed:
-        val = float(fixed.group(1).replace(",", ""))
-        budget_min = val * 0.8
-        budget_max = val
-        return budget_min, budget_max
-
-    return budget_min, budget_max
+def parse_budget(text: str):
+    if not text:
+        return None, None
+    text = text.replace(",", "")
+    numbers = re.findall(r"[\d]+(?:\.\d+)?", text)
+    numbers = [float(n) for n in numbers if float(n) > 0]
+    if "/hr" in text.lower() or "hour" in text.lower():
+        if numbers:
+            rate = numbers[0]
+            return rate * 40, rate * 160
+    if len(numbers) >= 2:
+        return numbers[0], numbers[1]
+    elif len(numbers) == 1:
+        return numbers[0] * 0.8, numbers[0]
+    return None, None
 
 
 def extract_skills(text: str) -> List[str]:
     skill_list = [
         "React", "Vue.js", "Angular", "Node.js", "Python", "JavaScript",
-        "TypeScript", "PHP", "Java", "Swift", "Kotlin", "Flutter", "Django",
-        "FastAPI", "WordPress", "Shopify", "Docker", "AWS", "PostgreSQL",
-        "MongoDB", "Figma", "Photoshop", "Illustrator", "SEO", "Go", "Rust",
-        "Ruby", "Rails", "GraphQL", "MySQL", "Redis", "Tailwind", "Next.js",
+        "TypeScript", "PHP", "Java", "Flutter", "Django", "WordPress",
+        "Shopify", "Docker", "AWS", "Figma", "Photoshop", "SEO",
+        "Next.js", "MySQL", "MongoDB", "Tailwind", "Swift", "Go",
     ]
     found = []
     text_lower = text.lower()
@@ -113,70 +98,95 @@ def extract_skills(text: str) -> List[str]:
 
 
 async def fetch_upwork_jobs() -> List[Job]:
-    """Fetch freelance projects from Upwork RSS feeds."""
+    """Scrape freelance projects from Guru.com (Upwork RSS is discontinued)."""
     jobs = []
     seen_ids = set()
 
-    for feed_url in UPWORK_RSS_FEEDS:
-        try:
-            feed = feedparser.parse(feed_url)
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
 
-            for entry in feed.entries[:30]:
-                try:
-                    title = entry.get("title", "").strip()
-                    if not title or len(title) < 5:
-                        continue
-
-                    link = entry.get("link", "")
-                    description = entry.get("summary", entry.get("description", ""))
-
-                    # Clean HTML tags from description
-                    clean_desc = re.sub(r"<[^>]+>", " ", description).strip()
-                    clean_desc = re.sub(r"\s+", " ", clean_desc)
-
-                    # Skip full-time job listings
-                    if is_job_listing(title, clean_desc):
-                        continue
-
-                    # Dedup
-                    job_hash = hashlib.md5(f"upwork-{link}".encode()).hexdigest()[:12]
-                    if job_hash in seen_ids:
-                        continue
-                    seen_ids.add(job_hash)
-
-                    # Parse date
-                    published = entry.get("published_parsed")
-                    if published:
-                        posted_at = datetime(*published[:6])
-                    else:
-                        posted_at = datetime.utcnow()
-
-                    budget_min, budget_max = parse_budget_from_text(clean_desc)
-                    category = categorize(title, clean_desc)
-                    skills = extract_skills(title + " " + clean_desc)
-
-                    job = Job(
-                        id=f"upwork-{job_hash}",
-                        title=title,
-                        description=clean_desc[:800],
-                        source="upwork",
-                        source_url=link,
-                        budget_min=budget_min,
-                        budget_max=budget_max,
-                        currency="USD",
-                        skills=skills,
-                        category=category,
-                        posted_at=posted_at,
-                        is_remote=True,
-                    )
-                    jobs.append(job)
-
-                except Exception:
+    async with httpx.AsyncClient(timeout=20.0, follow_redirects=True) as client:
+        for url in GURU_URLS[:3]:
+            try:
+                resp = await client.get(url, headers=headers)
+                if resp.status_code != 200:
                     continue
 
-        except Exception as e:
-            print(f"[Upwork] Error fetching feed {feed_url}: {e}")
-            continue
+                soup = BeautifulSoup(resp.text, "lxml")
 
-    print(f"[Upwork] 抓取到 {len(jobs)} 筆接案任務")
+                # Guru job cards
+                cards = soup.select(".jobRecord, .serviceRecord, [class*='job-record'], [class*='jobRecord']")
+                if not cards:
+                    cards = soup.select("li.record, div.record")
+                if not cards:
+                    cards = soup.find_all("div", class_=re.compile(r"job|project|listing", re.I))
+
+                for card in cards[:20]:
+                    try:
+                        title_el = card.find(["h2", "h3", "h4", "a"], class_=re.compile(r"title|heading|name", re.I))
+                        if not title_el:
+                            title_el = card.find("a", href=re.compile(r"/d/jobs/id/"))
+                        if not title_el:
+                            continue
+
+                        title = title_el.get_text(strip=True)
+                        if not title or len(title) < 5:
+                            continue
+
+                        link_el = card.find("a", href=re.compile(r"/d/jobs/|/job/"))
+                        link = ""
+                        if link_el:
+                            href = link_el.get("href", "")
+                            link = f"https://www.guru.com{href}" if href.startswith("/") else href
+
+                        desc_el = card.find(class_=re.compile(r"desc|summary|body|detail", re.I))
+                        description = desc_el.get_text(strip=True) if desc_el else title
+
+                        if is_job_listing(title, description):
+                            continue
+
+                        job_hash = hashlib.md5(f"guru-{title}-{link}".encode()).hexdigest()[:12]
+                        if job_hash in seen_ids:
+                            continue
+                        seen_ids.add(job_hash)
+
+                        budget_el = card.find(class_=re.compile(r"budget|price|amount|pay", re.I))
+                        budget_min, budget_max = parse_budget(
+                            budget_el.get_text(strip=True) if budget_el else ""
+                        )
+
+                        category = categorize(title, description)
+                        skills = extract_skills(title + " " + description)
+
+                        job = Job(
+                            id=f"guru-{job_hash}",
+                            title=title,
+                            description=description[:600],
+                            source="guru",
+                            source_url=link or url,
+                            budget_min=budget_min,
+                            budget_max=budget_max,
+                            currency="USD",
+                            skills=skills,
+                            category=category,
+                            posted_at=datetime.utcnow() - timedelta(hours=3),
+                            is_remote=True,
+                        )
+                        jobs.append(job)
+
+                    except Exception:
+                        continue
+
+            except Exception as e:
+                print(f"[Guru] Error fetching {url}: {e}")
+                continue
+
+    print(f"[Guru] 抓取到 {len(jobs)} 筆接案任務")
     return jobs
