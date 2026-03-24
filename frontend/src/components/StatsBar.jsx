@@ -4,17 +4,15 @@ import { zhTW } from 'date-fns/locale'
 import clsx from 'clsx'
 
 const SOURCE_COLORS = {
-  remoteok: 'bg-emerald-500',
   freelancer: 'bg-blue-500',
-  weworkremotely: 'bg-red-500',
-  '104': 'bg-orange-500',
+  guru: 'bg-emerald-500',
+  peopleperhour: 'bg-orange-500',
 }
 
 const SOURCE_LABELS = {
-  remoteok: 'RemoteOK',
   freelancer: 'Freelancer',
-  weworkremotely: 'WeWork',
-  '104': '104人力銀行',
+  guru: 'Guru.com',
+  peopleperhour: 'PeoplePerHour',
 }
 
 function RefreshIcon({ spinning }) {
@@ -49,7 +47,7 @@ export default function StatsBar({ stats, lastUpdated, isRefreshing, onRefresh }
         <span className="text-lg font-bold text-white">
           {stats?.total_jobs ?? '—'}
         </span>
-        <span className="text-sm text-gray-400">個職缺</span>
+        <span className="text-sm text-gray-400">個接案任務</span>
       </div>
 
       <div className="h-4 w-px bg-gray-700 hidden sm:block" />
