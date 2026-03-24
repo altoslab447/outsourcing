@@ -7,12 +7,14 @@ const SOURCE_COLORS = {
   freelancer: 'bg-blue-500',
   guru: 'bg-emerald-500',
   peopleperhour: 'bg-orange-500',
+  freelancermap: 'bg-purple-500',
 }
 
 const SOURCE_LABELS = {
   freelancer: 'Freelancer',
   guru: 'Guru.com',
   peopleperhour: 'PeoplePerHour',
+  freelancermap: 'FreelancerMap',
 }
 
 function RefreshIcon({ spinning }) {

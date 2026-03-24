@@ -17,6 +17,7 @@ from scrapers import (
     fetch_upwork_jobs,
     fetch_freelancer_jobs,
     fetch_peopleperhour_jobs,
+    fetch_freelancermap_jobs,
 )
 from ai_scorer import score_jobs_batch
 from models import UserPreferences
@@ -43,11 +44,12 @@ async def main():
         fetch_upwork_jobs(),
         fetch_freelancer_jobs(),
         fetch_peopleperhour_jobs(),
+        fetch_freelancermap_jobs(),
         return_exceptions=True,
     )
 
     all_jobs = []
-    source_names = ["Upwork", "Freelancer", "PeoplePerHour"]
+    source_names = ["Guru", "Freelancer", "PeoplePerHour", "FreelancerMap"]
 
     for name, result in zip(source_names, results):
         if isinstance(result, Exception):

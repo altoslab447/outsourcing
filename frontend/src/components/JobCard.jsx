@@ -22,6 +22,12 @@ const SOURCE_STYLES = {
     border: 'border-orange-800',
     label: 'PeoplePerHour',
   },
+  freelancermap: {
+    bg: 'bg-purple-900/50',
+    text: 'text-purple-400',
+    border: 'border-purple-800',
+    label: 'FreelancerMap',
+  },
 }
 
 const CATEGORY_STYLES = {

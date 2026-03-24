@@ -16,6 +16,7 @@ const SOURCE_OPTIONS = [
   { value: 'freelancer', label: 'Freelancer', color: 'text-blue-400' },
   { value: 'guru', label: 'Guru.com', color: 'text-emerald-400' },
   { value: 'peopleperhour', label: 'PeoplePerHour', color: 'text-orange-400' },
+  { value: 'freelancermap', label: 'FreelancerMap', color: 'text-purple-400' },
 ]
 
 const TIME_OPTIONS = [
@@ -82,7 +83,7 @@ export default function FilterPanel({ filters, onFiltersChange, onApply, onReset
       budget_min: 0,
       budget_max: 20000,
       hours: 'all',
-      sources: ['freelancer', 'guru', 'peopleperhour'],
+      sources: ['freelancer', 'guru', 'peopleperhour', 'freelancermap'],
       min_ai_score: 0,
     }
     setLocalFilters(defaultFilters)

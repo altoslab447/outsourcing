@@ -12,7 +12,7 @@ const DEFAULT_FILTERS = {
   budget_min: 0,
   budget_max: 20000,
   hours: 'all',
-  sources: ['freelancer', 'guru', 'peopleperhour'],
+  sources: ['freelancer', 'guru', 'peopleperhour', 'freelancermap'],
   min_ai_score: 0,
 }
 
