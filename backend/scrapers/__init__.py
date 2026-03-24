@@ -1,12 +1,10 @@
-# Scrapers package
-from .remoteok import fetch_remoteok_jobs
+# Scrapers package - freelance project platforms only
+from .upwork import fetch_upwork_jobs
 from .freelancer import fetch_freelancer_jobs
-from .weworkremotely import fetch_weworkremotely_jobs
-from .taiwan_104 import fetch_104_jobs
+from .peopleperhour import fetch_peopleperhour_jobs
 
 __all__ = [
-    "fetch_remoteok_jobs",
+    "fetch_upwork_jobs",
     "fetch_freelancer_jobs",
-    "fetch_weworkremotely_jobs",
-    "fetch_104_jobs",
+    "fetch_peopleperhour_jobs",
 ]

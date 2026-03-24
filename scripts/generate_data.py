@@ -14,17 +14,16 @@ from datetime import datetime
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
 
 from scrapers import (
-    fetch_remoteok_jobs,
+    fetch_upwork_jobs,
     fetch_freelancer_jobs,
-    fetch_weworkremotely_jobs,
-    fetch_104_jobs,
+    fetch_peopleperhour_jobs,
 )
 from ai_scorer import score_jobs_batch
 from models import UserPreferences
 
-# 預設偏好設定（可依需求調整）
 DEFAULT_PREFERENCES = UserPreferences(
-    skills=["React", "Python", "Node.js", "TypeScript", "Vue.js", "Django", "FastAPI", "Flutter", "Docker", "AWS"],
+    skills=["React", "Python", "Node.js", "TypeScript", "Vue.js", "Django",
+            "FastAPI", "Flutter", "Docker", "AWS", "PHP", "WordPress"],
     min_budget=100,
     max_budget=50000,
     preferred_categories=["技術開發", "設計創意", "行銷文案", "翻譯文字", "其他"],
@@ -41,15 +40,14 @@ async def main():
 
     # 並行抓取所有來源
     results = await asyncio.gather(
-        fetch_remoteok_jobs(),
+        fetch_upwork_jobs(),
         fetch_freelancer_jobs(),
-        fetch_weworkremotely_jobs(),
-        fetch_104_jobs(),
+        fetch_peopleperhour_jobs(),
         return_exceptions=True,
     )
 
     all_jobs = []
-    source_names = ["RemoteOK", "Freelancer", "WeWorkRemotely", "104"]
+    source_names = ["Upwork", "Freelancer", "PeoplePerHour"]
 
     for name, result in zip(source_names, results):
         if isinstance(result, Exception):
@@ -68,7 +66,7 @@ async def main():
             all_jobs,
             DEFAULT_PREFERENCES,
             api_key=api_key,
-            max_jobs=50,  # 每次最多評 50 筆，節省費用
+            max_jobs=60,
         )
         print("AI 評分完成")
     else:
