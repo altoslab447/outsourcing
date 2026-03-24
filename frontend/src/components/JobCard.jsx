@@ -4,29 +4,23 @@ import { zhTW } from 'date-fns/locale'
 import clsx from 'clsx'
 
 const SOURCE_STYLES = {
-  remoteok: {
-    bg: 'bg-emerald-900/50',
-    text: 'text-emerald-400',
-    border: 'border-emerald-800',
-    label: 'RemoteOK',
-  },
   freelancer: {
     bg: 'bg-blue-900/50',
     text: 'text-blue-400',
     border: 'border-blue-800',
     label: 'Freelancer',
   },
-  weworkremotely: {
-    bg: 'bg-red-900/50',
-    text: 'text-red-400',
-    border: 'border-red-800',
-    label: 'WeWork',
+  guru: {
+    bg: 'bg-emerald-900/50',
+    text: 'text-emerald-400',
+    border: 'border-emerald-800',
+    label: 'Guru.com',
   },
-  '104': {
+  peopleperhour: {
     bg: 'bg-orange-900/50',
     text: 'text-orange-400',
     border: 'border-orange-800',
-    label: '104',
+    label: 'PeoplePerHour',
   },
 }
 
@@ -104,7 +98,7 @@ function formatRelativeTime(dateStr) {
 }
 
 export default function JobCard({ job }) {
-  const sourceStyle = SOURCE_STYLES[job.source] || SOURCE_STYLES['remoteok']
+  const sourceStyle = SOURCE_STYLES[job.source] || SOURCE_STYLES['freelancer']
   const categoryStyle = CATEGORY_STYLES[job.category] || CATEGORY_STYLES['其他']
   const displayTitle = job.title_zh || job.title
   const budget = formatBudget(job.budget_min, job.budget_max, job.currency)

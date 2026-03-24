@@ -12,7 +12,7 @@ const DEFAULT_FILTERS = {
   budget_min: 0,
   budget_max: 20000,
   hours: 'all',
-  sources: ['remoteok', 'freelancer', 'weworkremotely', '104'],
+  sources: ['freelancer', 'guru', 'peopleperhour'],
   min_ai_score: 0,
 }
 
@@ -187,7 +187,7 @@ export default function Dashboard() {
               <p className="text-sm text-gray-500">
                 {loading ? '載入中...' : (
                   <>
-                    顯示 <span className="text-gray-300 font-medium">{jobs.length}</span> 個職缺
+                    顯示 <span className="text-gray-300 font-medium">{jobs.length}</span> 個接案任務
                     {activeCategory !== '全部' && (
                       <span className="ml-1 text-blue-400">· {activeCategory}</span>
                     )}

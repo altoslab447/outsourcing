@@ -13,10 +13,9 @@ const SUGGESTED_SKILLS = [
 ]
 
 const SOURCE_OPTIONS = [
-  { value: 'remoteok', label: 'RemoteOK', color: 'text-emerald-400' },
   { value: 'freelancer', label: 'Freelancer', color: 'text-blue-400' },
-  { value: 'weworkremotely', label: 'WeWorkRemotely', color: 'text-red-400' },
-  { value: '104', label: '104人力銀行', color: 'text-orange-400' },
+  { value: 'guru', label: 'Guru.com', color: 'text-emerald-400' },
+  { value: 'peopleperhour', label: 'PeoplePerHour', color: 'text-orange-400' },
 ]
 
 const TIME_OPTIONS = [
@@ -83,7 +82,7 @@ export default function FilterPanel({ filters, onFiltersChange, onApply, onReset
       budget_min: 0,
       budget_max: 20000,
       hours: 'all',
-      sources: ['remoteok', 'freelancer', 'weworkremotely', '104'],
+      sources: ['freelancer', 'guru', 'peopleperhour'],
       min_ai_score: 0,
     }
     setLocalFilters(defaultFilters)
