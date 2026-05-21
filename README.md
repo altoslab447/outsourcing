@@ -1,21 +1,27 @@
-# 接案雷達 (Freelance Finder)
+# Freelance Opportunity Radar
 
-A full-stack internal tool for finding and filtering freelance tasks from multiple sources, with AI-powered scoring and Chinese/English bilingual support.
+A full-stack internal tool for finding, filtering, and prioritizing freelance
+and remote contract opportunities.
+
+The goal is simple: reduce noisy job searching into a smaller review queue with
+clear filters, source context, and practical fit signals.
 
 ## Features
 
-- **Multi-source job aggregation**: RemoteOK API, Freelancer.com, WeWorkRemotely RSS, 104.com.tw
-- **AI scoring**: Claude Haiku scores each job 0-10 based on your skills and preferences
-- **Bilingual UI**: Chinese primary, English secondary
-- **Real-time filtering**: by skills, budget, time, source, and AI score
-- **Smart caching**: SQLite cache refreshes every 30 minutes
-- **Mock data fallback**: 22 realistic sample jobs if scrapers fail
+- Multi-source job aggregation: RemoteOK API, Freelancer.com,
+  WeWorkRemotely RSS, 104.com.tw.
+- Fit scoring for ranking opportunities against preferred skills and
+  constraints.
+- Chinese/English bilingual interface.
+- Filtering by skills, budget, time, source, category, and score.
+- SQLite cache for repeated scans.
+- Mock data fallback when external sources are unavailable.
 
 ## Tech Stack
 
-- **Backend**: Python FastAPI + SQLite
-- **Frontend**: React 18 + Vite + Tailwind CSS
-- **AI**: Anthropic Claude Haiku (claude-haiku-4-5-20251001)
+- Backend: Python FastAPI + SQLite
+- Frontend: React 18 + Vite + Tailwind CSS
+- Optional scoring provider: Anthropic Claude
 
 ## Setup
 
@@ -29,7 +35,7 @@ pip install -r requirements.txt
 
 # Copy and configure environment
 cp ../.env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
+# Edit .env and add your ANTHROPIC_API_KEY if scoring is enabled.
 
 # Start server
 python main.py
@@ -51,9 +57,10 @@ Open http://localhost:5173
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `ANTHROPIC_API_KEY` | Optional | For AI job scoring (Claude Haiku) |
+| `ANTHROPIC_API_KEY` | Optional | Enables fit scoring |
 
-Without an API key, AI scores show as "N/A". The tool still works fully for browsing and filtering.
+Without an API key, scores show as "N/A". The tool still works for browsing
+and filtering.
 
 ## API Endpoints
 
@@ -94,3 +101,8 @@ Without an API key, AI scores show as "N/A". The tool still works fully for brow
 - Freelancer: Blue
 - WeWorkRemotely: Red
 - 104人力銀行: Orange
+
+## Notes
+
+This is an internal operations tool, not a promise of job placement. Each
+opportunity still needs manual review before applying.
