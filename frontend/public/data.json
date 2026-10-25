@@ -1,263 +1,261 @@
 {
-  "generated_at": "2026-10-24T08:38:48.724193Z",
+  "generated_at": "2026-10-25T08:56:36.281596Z",
   "total": 30,
   "by_source": {
     "freelancer": 10,
     "freelancermap": 20
   },
   "by_category": {
-    "技術開發": 21,
-    "設計創意": 4,
-    "其他": 4,
-    "行銷文案": 1
+    "技術開發": 24,
+    "設計創意": 3,
+    "其他": 3
   },
   "jobs": [
     {
-      "id": "freelancer-c902770d1d34",
-      "title": "B2B Business Development for AI Automation – Pune",
+      "id": "freelancer-1aeafe57f6dd",
+      "title": "Cafe Electrical Design",
       "title_zh": null,
-      "description": "LogicSetu is looking for a freelancer who can help us find clients among small and medium-sized manufacturing companies in Pune.\n\nResponsibilities:\n\n- Identify manufacturers who need AI automation.\n- Contact company owners and decision-makers.\n- Understand their business problems and identify automation opportunities.\n- Arrange meetings with interested clients.\n- Help generate genuine business opportunities for LogicSetu.\n\nImportant: We are not looking for someone to build software or simply provide a lead database. We need someone who can help us connect with potential clients and generate op",
+      "description": "I'm seeking an experienced electrical engineer to create comprehensive electrical plans for a cafe construction project. \n\nRequirements include:\n- Full electrical plans, including panel schedules and detailed wiring diagrams.\n- Integration of all necessary equipment in the design:\n  - Cafe equipment: coffee machines, grinders, display cases\n  - Kitchen equipment: ovens, refrigerators, dishwashers\n  - HVAC: air conditioning, ventilation, water heaters\n\nAn accurate and professional plan is crucial for ensuring safety and compliance with building codes. \n\nIdeal skills and experience:\n- Proven exp",
       "description_zh": null,
       "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/b2b-marketing/lead-generation-for-automation",
-      "budget_min": 50.400000000000006,
-      "budget_max": 63.0,
+      "source_url": "https://www.freelancer.com/projects/air-conditioning/cafe-electrical-design",
+      "budget_min": 334.0,
+      "budget_max": 1003.0,
       "currency": "USD",
       "skills": [
-        "AI AutomationB2B MarketingBusiness DevelopmentLead GenerationLeadsMarket ResearchMarketingSales",
-        "AI Automation",
-        "B2B Marketing",
-        "Business Development",
-        "Lead Generation",
-        "Leads"
+        "Air ConditioningAutoCADBuilding ArchitectureCAD/CAMConstruction EngineeringElectrical EngineeringHVACLighting DesignProject ManagementTechnical Documentation",
+        "Air Conditioning",
+        "AutoCAD",
+        "Building Architecture",
+        "CAD/CAM",
+        "Construction Engineering"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T06:38:45.098611",
+      "posted_at": "2026-10-25T06:56:32.809074",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
     },
     {
-      "id": "freelancer-fc5ee227d044",
-      "title": "Amazon & Myntra Fashion Listings Creation",
+      "id": "freelancer-5f1110312dd5",
+      "title": "Social Media Designer & Video Editor (20 Hours Weekly)",
       "title_zh": null,
-      "description": "I am ready to add a new line of clothing and fashion accessories to both Amazon India and the Myntra Seller portal. All core assets are in place—high-resolution product photos, verified size and colour information, plus polished titles, descriptions and brand details—so I now need someone who can turn this material into fully optimised, live listings.\n\nHere is what I expect once we start:  \n• Creation of parent-child variants where sizes or colours apply, following Amazon and Myntra style guides.  \n• Keyword-rich (yet natural) bullet points, search terms and descriptions that comply with Amazo",
+      "description": "Monthly Part Time Job, 20 Hours Weekly. Bid your monthly salary.\n\nRequirements\nMinimum 2 years of professional experience in graphic design and/or video editing.\nStrong experience designing content specifically for social media.\nProficiency in Adobe Photoshop and Illustrator or equivalent professional design tools.\nProficiency in Adobe Premiere Pro, After Effects, CapCut, DaVinci Resolve, or similar video editing software.\nAbility to create visually engaging short-form videos with strong hooks, pacing, and storytelling.\nStrong understanding of typography, color combinations, composition, and b",
       "description_zh": null,
       "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/amazon/amazon-myntra-fashion-listings-creation",
-      "budget_min": 6.4,
-      "budget_max": 8.0,
+      "source_url": "https://www.freelancer.com/projects/adobe-photoshop/social-media-designer-video-editor",
+      "budget_min": 117.60000000000001,
+      "budget_max": 147.0,
       "currency": "USD",
       "skills": [
-        "AmazonBrand ManagementContent WritingData EntryDigital MarketingKeyword ResearchProduct PhotographySEO",
-        "Amazon",
-        "Brand Management",
-        "Content Writing",
-        "Data Entry",
-        "Digital Marketing"
-      ],
-      "category": "技術開發",
-      "posted_at": "2026-10-24T06:38:45.099505",
-      "ai_score": null,
-      "ai_reason": null,
-      "is_remote": true
-    },
-    {
-      "id": "freelancer-8cf512274373",
-      "title": "Mobile App UI/UX Overhaul",
-      "title_zh": null,
-      "description": "Our mobile app needs a fresh start. Every screen, interaction, and micro-moment is on the table so that users can breeze through a booking without friction. I want a modern, clean interface backed by brand-new user journeys and simpler navigation.\n\nHere’s how I see the work unfolding: first, you’ll audit the current experience and map existing flows; then you’ll re-architect them around the key task of eliminating detours and redundant steps. From there, we’ll move to high-fidelity designs for iOS and Android and finish with an interactive prototype that I can hand straight to my development t",
-      "description_zh": null,
-      "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/ui-design/mobile-app-overhaul-40784326",
-      "budget_min": 104.80000000000001,
-      "budget_max": 131.0,
-      "currency": "USD",
-      "skills": [
-        "Adobe XDFigmaGraphic DesignInteraction DesignMobile App DevelopmentPrototypingUI / User InterfaceUser Experience ResearchUser Interface / IAUX / User Experience",
-        "Adobe XD",
-        "Figma",
-        "Graphic Design",
-        "Interaction Design",
-        "Mobile App Development"
-      ],
-      "category": "技術開發",
-      "posted_at": "2026-10-24T06:38:45.100487",
-      "ai_score": null,
-      "ai_reason": null,
-      "is_remote": true
-    },
-    {
-      "id": "freelancer-c42027fa3916",
-      "title": "Seeking Professional American Accent Voice Artist",
-      "title_zh": null,
-      "description": "I’m launching a new YouTube channel and need a voice that sounds authentically American—warm, conversational, and instantly engaging. My audience spans everyone from students to business professionals, so clarity and a relaxed, friendly tone are vital.\n\nYou’ll be recording scripted pieces that I’ll supply, then returning fully cleaned, ready-to-publish audio in WAV or high-quality MP3. Your home or studio setup must be quiet and studio-grade so that I can drop the tracks straight onto the timeline with no extra noise-reduction work.\n\nWhen you reply, please include:\n• Your per-minute or flat pr",
-      "description_zh": null,
-      "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/voice-acting/seeking-professional-american-accent",
-      "budget_min": 16.0,
-      "budget_max": 132.0,
-      "currency": "USD",
-      "skills": [
-        "Audio EditingAudio EngineeringAudio ProductionAudio ServicesCommercialsPodcastingSound DesignVoice ActingVoice OverVoice Talent",
-        "Audio Editing",
-        "Audio Engineering",
-        "Audio Production",
-        "Audio Services",
-        "Commercials"
-      ],
-      "category": "設計創意",
-      "posted_at": "2026-10-24T06:38:45.101383",
-      "ai_score": null,
-      "ai_reason": null,
-      "is_remote": true
-    },
-    {
-      "id": "freelancer-574b6b3eccbd",
-      "title": "YouTube Shorts Video Editor Needed",
-      "title_zh": null,
-      "description": "I have a collection of raw clips that need to be turned into punchy YouTube Shorts. Each final cut should land under 60 seconds, open strong, and keep viewers hooked with dynamic pacing, on-brand motion graphics, captions that pop, and royalty-free background music.  \n\nHere’s what I’m aiming for:  \n• 4K or crisp 1080p vertical (9:16) exports that meet YouTube Shorts specs.  \n• Engaging edits—jump cuts, zooms, quick transitions—without feeling over-processed.  \n• Burned-in captions styled to match my brand colors.  \n• Light color correction and audio sweetening so everything looks and sounds co",
-      "description_zh": null,
-      "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/adobe-premiere-pro/youtube-shorts-video-editor-needed-40784320",
-      "budget_min": 261.6,
-      "budget_max": 327.0,
-      "currency": "USD",
-      "skills": [
-        "Adobe Premiere ProAfter EffectsDaVinci ResolveMotion GraphicsVideo EditingVideo Post-editingVideo ProductionVideo Services",
+        "Adobe IllustratorAdobe PhotoshopAdobe Premiere ProAfter EffectsAnimationCapCutDaVinci ResolveGraphic DesignVideo EditingVideo Services",
+        "Adobe Illustrator",
+        "Adobe Photoshop",
         "Adobe Premiere Pro",
         "After Effects",
-        "DaVinci Resolve",
-        "Motion Graphics",
-        "Video Editing"
+        "Animation"
       ],
-      "category": "設計創意",
-      "posted_at": "2026-10-24T06:38:45.102182",
+      "category": "技術開發",
+      "posted_at": "2026-10-25T06:56:32.809817",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
     },
     {
-      "id": "freelancer-1150bfd561ea",
-      "title": "Personal Loan",
+      "id": "freelancer-34ef838634da",
+      "title": "Source Tradespeople for Maintenance Projects",
       "title_zh": null,
-      "description": "I am seeking assistance in securing a personal loan through a peer-to-peer marketplace so I can fund a planned purchase/project. My priority is to connect with credible individual lenders and present a compelling, accurate loan profile that maximises my chances of full funding at a competitive rate.",
+      "description": "I need a talent partner who can rapidly locate and present skilled trades professionals for a series of short-term maintenance and repair assignments. These jobs pop up with little notice and generally last anywhere from a single day to a few weeks, so speed and reliability are critical.  \n\nYour mission is to deliver workers who are fully vetted, licensed where required, and ready to step onto a site as soon as I give the green light. I value recruiters who already maintain deep trade networks or know exactly which job boards, unions, schools, and social channels produce quick results.\n\nDelive",
       "description_zh": null,
       "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/financial-consulting/personal-loan",
+      "source_url": "https://www.freelancer.com/projects/talent-acquisition/source-tradespeople-for-maintenance",
       "budget_min": 8.0,
       "budget_max": 10.0,
       "currency": "USD",
       "skills": [
-        "Article WritingBusiness ConsultingFinancial AnalysisFinancial ConsultingFinancial PlanningInvestment ResearchMarket ResearchReport WritingResearch WritingTechnical Writing",
-        "Article Writing",
-        "Business Consulting",
-        "Financial Analysis",
-        "Financial Consulting",
-        "Financial Planning"
-      ],
-      "category": "其他",
-      "posted_at": "2026-10-24T06:38:45.102977",
-      "ai_score": null,
-      "ai_reason": null,
-      "is_remote": true
-    },
-    {
-      "id": "freelancer-dffa28276ec6",
-      "title": "हिंदी शैक्षिक अध्ययन सामग्री पैकेज",
-      "title_zh": null,
-      "description": "I need a complete educational study material package for school students. The content should include detailed explanations in simple Hindi, key points, examples, diagrams or flowcharts where useful, and practice questions with answers. The material should be well-organized, accurate, student-friendly, and delivered in editable Word and PDF formats. Please provide clear pricing and delivery time.",
-      "description_zh": null,
-      "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/content-writing/project-40784318",
-      "budget_min": 7.2,
-      "budget_max": 9.0,
-      "currency": "USD",
-      "skills": [
-        "Academic WritingContent CreationContent DevelopmentContent WritingDocument CheckingEditingEducational ResearchInstructional Design",
-        "Academic Writing",
-        "Content Creation",
-        "Content Development",
-        "Content Writing",
-        "Document Checking"
-      ],
-      "category": "行銷文案",
-      "posted_at": "2026-10-24T06:38:45.103755",
-      "ai_score": null,
-      "ai_reason": null,
-      "is_remote": true
-    },
-    {
-      "id": "freelancer-5ba21e0f1fb2",
-      "title": "Combine PDFs into Word",
-      "title_zh": null,
-      "description": "Several text-only PDF files need to be transferred into Word. Every character must carry over exactly as written, yet I do not require original fonts, spacing tricks, or page design—only the raw text itself. Once converted, place the content of each PDF one after another so everything ends up in a single, easy-to-edit .docx.\n\nAny reliable PDF-to-Word tool or careful manual copy works as long as the wording remains flawless. Double-check for lost accents, broken lines, or stray characters before sending the file. The finished document should open without warnings in Microsoft Word 2019.\n\nDelive",
-      "description_zh": null,
-      "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/microsoft-word/combine-pdfs-into-word",
-      "budget_min": 132.8,
-      "budget_max": 166.0,
-      "currency": "USD",
-      "skills": [
-        "Copy EditingCopy TypingData EntryData ProcessingExcelMicrosoft OfficeMicrosoft WordPDFWordWord Processing",
-        "Copy Editing",
-        "Copy Typing",
+        "Candidate ScreeningData EntryExcelHuman ResourcesResearchSourcingTalent AcquisitionWeb Search",
+        "Candidate Screening",
         "Data Entry",
-        "Data Processing",
-        "Excel"
-      ],
-      "category": "設計創意",
-      "posted_at": "2026-10-24T06:38:45.104577",
-      "ai_score": null,
-      "ai_reason": null,
-      "is_remote": true
-    },
-    {
-      "id": "freelancer-de585c54edec",
-      "title": "Blender 3D Materials and Modeling",
-      "title_zh": null,
-      "description": "Looking for a freelancer skilled in Blender to complete the following tasks within 2 days:\n1. Create a marble table with metal legs using Principled BSDF, Color Ramp, and Noise texture.\n2. Design lava material with an ocean modifier and appropriate surroundings using Principled BSDF, Color Ramp, and Noise texture.\n3. Develop a wooden material for a cylinder mesh using Principled BSDF, Color Ramp, and Wave texture.\n\nScreenshots are required for each task, showing the 3D Viewport with Material Preview in the top half and Shader Editor in the bottom half. Additionally, Blender project files must ",
-      "description_zh": null,
-      "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/3d-animation/blender-materials-modeling",
-      "budget_min": 10.4,
-      "budget_max": 13.0,
-      "currency": "USD",
-      "skills": [
-        "3D Animation3D Modelling3D Rendering3ds MaxSolidworks",
-        "3D Animation",
-        "3D Modelling",
-        "3D Rendering",
-        "3ds Max",
-        "Solidworks"
+        "Excel",
+        "Human Resources",
+        "Research"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T06:38:45.105338",
+      "posted_at": "2026-10-25T06:56:32.810474",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
     },
     {
-      "id": "freelancer-0158c82631fd",
-      "title": "Organized PDF-to-Sheets Data Entry Dashboard",
+      "id": "freelancer-3cc51b14d2e6",
+      "title": "Commission-Only Design Sales Rep",
       "title_zh": null,
-      "description": "You will start from my existing file (no data re-entry needed) and build an interactive dashboard that uses formulas, PivotTables, slicers and clean charts to reveal:\n• Income and expense totals for each month,\n• A running profit figure that updates automatically when new months are added.\n\nPlease keep everything inside one workbook, make sure the source sheet can stay in its current structure, and document any macros or Power Query steps so I can maintain the model myself later.\n\nDeliverables\n• The completed Excel dashboard (.xlsx) linked to the original data sheet.\n• A short “how-to” note or",
+      "description": "I run a U.S.–based creative agency and need a driven closer who can win new work on a pure-commission basis. Your primary mission is to introduce our branding, logo, and graphic-design packages to growing online businesses across the United States, guide them through our process, and secure signed projects.\n\nI will supply case studies, portfolio links, price sheets, and a lightweight CRM so you can track conversations. You concentrate on prospecting, pitching, and closing; once a contract is signed my production team takes over and you collect your percentage at each paid milestone.\n\nBecause c",
       "description_zh": null,
       "source": "freelancer",
-      "source_url": "https://www.freelancer.com/projects/data-analysis/organized-pdf-sheets-data-entry",
-      "budget_min": 377.6,
-      "budget_max": 472.0,
+      "source_url": "https://www.freelancer.com/projects/business-development/commission-only-design-sales-rep",
+      "budget_min": 1688.0,
+      "budget_max": 2110.0,
       "currency": "USD",
       "skills": [
-        "Article WritingCopy TypingCreative WritingData AnalysisData EntryExcelPDFTypingWord",
-        "Article Writing",
-        "Copy Typing",
-        "Creative Writing",
-        "Data Analysis",
-        "Data Entry"
+        "Business DevelopmentInternet MarketingSalesSales Management",
+        "Business Development",
+        "Internet Marketing",
+        "Sales",
+        "Sales Management"
+      ],
+      "category": "技術開發",
+      "posted_at": "2026-10-25T06:56:32.811031",
+      "ai_score": null,
+      "ai_reason": null,
+      "is_remote": true
+    },
+    {
+      "id": "freelancer-1ae83890adbc",
+      "title": "Benefits-Driven Product Demo Video",
+      "title_zh": null,
+      "description": "I need an eye-catching product demo that zeroes in on the key benefits and standout features of my offering. Rather than walking viewers through every step, the objective is to spark interest quickly, show why the product matters, and leave them eager to learn more.\n\nHere’s what I’m after:\n• A concise script that frames each benefit in plain, persuasive language.  \n• Dynamic visuals—screen captures, animated callouts or live-action shots—that reinforce those talking points.  \n• Clean, upbeat voice-over and background music with the proper licensing.  \n• Final delivery in 1080p (or higher) MP4,",
+      "description_zh": null,
+      "source": "freelancer",
+      "source_url": "https://www.freelancer.com/projects/adobe-premiere-pro/benefits-driven-product-demo-video",
+      "budget_min": 8.8,
+      "budget_max": 11.0,
+      "currency": "USD",
+      "skills": [
+        "Adobe Premiere ProAfter EffectsAnimationMotion GraphicsScript WritingVideo EditingVideo ServicesVoice Over",
+        "Adobe Premiere Pro",
+        "After Effects",
+        "Animation",
+        "Motion Graphics",
+        "Script Writing"
       ],
       "category": "設計創意",
-      "posted_at": "2026-10-24T06:38:45.106139",
+      "posted_at": "2026-10-25T06:56:32.811587",
+      "ai_score": null,
+      "ai_reason": null,
+      "is_remote": true
+    },
+    {
+      "id": "freelancer-2b4583bd6aaa",
+      "title": "High-Converting Customer Pitch Deck",
+      "title_zh": null,
+      "description": "I need a concise, visually engaging sales deck that speaks directly to individual customers and persuades them to sign up for a free trial or live demo. The content should highlight pain points, show clear benefits, build trust quickly, and finish with an irresistible call-to-action that links straight to my sign-up page.\n\nYou’re free to work in PowerPoint, Keynote, Google Slides, or Canva—as long as the final file can be edited later and exported to PDF. Strong copywriting, clean data visualization, and on-brand design are essential.\n\nDeliverables\n• 10–12 slide pitch deck, fully designed and ",
+      "description_zh": null,
+      "source": "freelancer",
+      "source_url": "https://www.freelancer.com/projects/brochure-design/high-converting-customer-pitch-deck",
+      "budget_min": 154.4,
+      "budget_max": 193.0,
+      "currency": "USD",
+      "skills": [
+        "Brochure DesignCanvaContent WritingCopywritingData VisualizationGoogle SlidesGraphic DesignKeynote",
+        "Brochure Design",
+        "Canva",
+        "Content Writing",
+        "Copywriting",
+        "Data Visualization"
+      ],
+      "category": "設計創意",
+      "posted_at": "2026-10-25T06:56:32.812193",
+      "ai_score": null,
+      "ai_reason": null,
+      "is_remote": true
+    },
+    {
+      "id": "freelancer-3ce27715aa00",
+      "title": "YouTube Video Editing Needed",
+      "title_zh": null,
+      "description": "I have raw footage that needs turning into a polished YouTube video. Because this is specifically for YouTube, pacing, clarity, and visual engagement are key.  \n\nI’ll supply the source clips, any graphics or screenshots I already have, and notes on the intended flow. You’ll shape that material into a finished video that’s ready for upload—complete with appropriate transitions, colour correction, audio balancing, and any light motion graphics or text call-outs that help the story land.  \n\nFinal deliverable: a high-quality 1080p (or higher) MP4 plus the project file so I can make tweaks later if",
+      "description_zh": null,
+      "source": "freelancer",
+      "source_url": "https://www.freelancer.com/projects/adobe-premiere-pro/youtube-video-editing-needed-40785702",
+      "budget_min": 195.20000000000002,
+      "budget_max": 244.0,
+      "currency": "USD",
+      "skills": [
+        "Adobe Premiere ProAfter EffectsDaVinci ResolveFinal Cut ProVideo EditingVideo Post-editingVideo ProductionVideo Services",
+        "Adobe Premiere Pro",
+        "After Effects",
+        "DaVinci Resolve",
+        "Final Cut Pro",
+        "Video Editing"
+      ],
+      "category": "技術開發",
+      "posted_at": "2026-10-25T06:56:32.812779",
+      "ai_score": null,
+      "ai_reason": null,
+      "is_remote": true
+    },
+    {
+      "id": "freelancer-b1ed3e24d3a4",
+      "title": "cross-platform application for my existing cricket website, Criclive.in.",
+      "title_zh": null,
+      "description": "Project Title: Build a Cross-Platform Mobile App for \n\nI am looking for an experienced mobile app developer or development team to build a professional cross-platform application for my existing cricket website, Criclive.in.\n\nThe goal is to develop an Android and iOS application based on the existing  website, maintaining consistent branding, design, features, and user experience across the website and mobile app.\n\nProject Requirements:\n\n- Develop a cross-platform mobile application for both Android and iOS using a suitable technology such as Flutter or React Native.\n- Use my existing  website",
+      "description_zh": null,
+      "source": "freelancer",
+      "source_url": "https://www.freelancer.com/projects/flutter/cross-platform-application-for-existing",
+      "budget_min": 5407.200000000001,
+      "budget_max": 6759.0,
+      "currency": "USD",
+      "skills": [
+        "AndroidAPI IntegrationDocumentationFlutteriOSiPhoneMobile App DevelopmentPHPReact NativeWeb Development",
+        "Android",
+        "API Integration",
+        "Documentation",
+        "Flutter",
+        "iOS"
+      ],
+      "category": "技術開發",
+      "posted_at": "2026-10-25T06:56:32.813363",
+      "ai_score": null,
+      "ai_reason": null,
+      "is_remote": true
+    },
+    {
+      "id": "freelancer-c1052df2497e",
+      "title": "Accurate Document Typing to Google Docs - 25/10/2026 04:17 EDT",
+      "title_zh": null,
+      "description": "I need help converting a collection of existing documents into clean, error-free Google Docs. Typing is the sole focus—no design or copy-paste shortcuts—so every page must be re-keyed and lightly formatted to match the original layout.\n\nYou will receive the source files as soon as we start. Consistent margins, headings, and paragraph spacing matter to me, and I will review each file for accuracy before sign-off. If you normally work in Microsoft Word or PDF, that is fine during drafting, but the final hand-over must be in Google Docs with sharing permissions set to “Editor”.\n\nAcceptable delive",
+      "description_zh": null,
+      "source": "freelancer",
+      "source_url": "https://www.freelancer.com/projects/arts-amp-crafts/accurate-document-typing-google-docs-40785698",
+      "budget_min": 181.60000000000002,
+      "budget_max": 227.0,
+      "currency": "USD",
+      "skills": [
+        "Arts & CraftsC ProgrammingCopy TypingCopywritingEditing",
+        "Arts & Crafts",
+        "C Programming",
+        "Copy Typing",
+        "Copywriting",
+        "Editing"
+      ],
+      "category": "設計創意",
+      "posted_at": "2026-10-25T06:56:32.813930",
+      "ai_score": null,
+      "ai_reason": null,
+      "is_remote": true
+    },
+    {
+      "id": "freelancer-26d0cb6c09c7",
+      "title": "PDF Text Replicated in Word",
+      "title_zh": null,
+      "description": "I need the text from a selectable-text PDF copied into a Word document while preserving the original layout line for line, page for page. Only the text is required—no tables or images—yet headings, spacing, and overall structure must look identical to what appears in the PDF.\n\nBecause the source is already digital, no OCR is necessary; a direct extraction through Adobe Acrobat, Nitro, or a similar tool is fine as long as you clean up any conversion quirks. Please avoid text boxes or fixed-width frames so the file remains editable in Word 2019 and later.  \n\nDeliverable: a single, fully formatte",
+      "description_zh": null,
+      "source": "freelancer",
+      "source_url": "https://www.freelancer.com/projects/adobe-acrobat/pdf-text-replicated-word",
+      "budget_min": 163.20000000000002,
+      "budget_max": 204.0,
+      "currency": "USD",
+      "skills": [
+        "Copy TypingData EntryEditingExcelMicrosoft WordPDFWordWord Processing",
+        "Copy Typing",
+        "Data Entry",
+        "Editing",
+        "Excel",
+        "Microsoft Word"
+      ],
+      "category": "技術開發",
+      "posted_at": "2026-10-25T06:56:32.814488",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -277,7 +275,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496120",
+      "posted_at": "2026-10-25T08:56:34.838636",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -295,7 +293,7 @@
       "currency": "USD",
       "skills": [],
       "category": "其他",
-      "posted_at": "2026-10-24T08:38:47.496187",
+      "posted_at": "2026-10-25T08:56:34.838728",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -313,7 +311,7 @@
       "currency": "USD",
       "skills": [],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496228",
+      "posted_at": "2026-10-25T08:56:34.838772",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -333,7 +331,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496253",
+      "posted_at": "2026-10-25T08:56:34.838791",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -353,7 +351,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496288",
+      "posted_at": "2026-10-25T08:56:34.838820",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -373,7 +371,7 @@
         "AWS"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496336",
+      "posted_at": "2026-10-25T08:56:34.838868",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -393,7 +391,7 @@
         "Java"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496382",
+      "posted_at": "2026-10-25T08:56:34.838904",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -413,7 +411,7 @@
         "Java"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496427",
+      "posted_at": "2026-10-25T08:56:34.838942",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -433,7 +431,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496457",
+      "posted_at": "2026-10-25T08:56:34.838964",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -451,7 +449,7 @@
       "currency": "USD",
       "skills": [],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496487",
+      "posted_at": "2026-10-25T08:56:34.838988",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -471,7 +469,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496510",
+      "posted_at": "2026-10-25T08:56:34.839005",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -491,7 +489,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496535",
+      "posted_at": "2026-10-25T08:56:34.839022",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -511,7 +509,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496558",
+      "posted_at": "2026-10-25T08:56:34.839040",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -531,7 +529,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496580",
+      "posted_at": "2026-10-25T08:56:34.839056",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -549,7 +547,7 @@
       "currency": "USD",
       "skills": [],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496609",
+      "posted_at": "2026-10-25T08:56:34.839078",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -569,7 +567,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496632",
+      "posted_at": "2026-10-25T08:56:34.839095",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -589,7 +587,7 @@
         "SAP"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496658",
+      "posted_at": "2026-10-25T08:56:34.839115",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -607,7 +605,7 @@
       "currency": "USD",
       "skills": [],
       "category": "其他",
-      "posted_at": "2026-10-24T08:38:47.496704",
+      "posted_at": "2026-10-25T08:56:34.839154",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -628,7 +626,7 @@
         ".NET"
       ],
       "category": "技術開發",
-      "posted_at": "2026-10-24T08:38:47.496754",
+      "posted_at": "2026-10-25T08:56:34.839195",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
@@ -646,7 +644,7 @@
       "currency": "USD",
       "skills": [],
       "category": "其他",
-      "posted_at": "2026-10-24T08:38:47.496782",
+      "posted_at": "2026-10-25T08:56:34.839218",
       "ai_score": null,
       "ai_reason": null,
       "is_remote": true
